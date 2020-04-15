@@ -1,38 +1,66 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Calculator {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  font-size: 20px;
+  max-width: 25rem;
+  margin: 2rem auto;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.Calculator-display {
+  background-color: #393939;
+  color: #fff;
+  padding: 2rem;
+  font-size: 3rem;
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: flex-end;
+  overflow: hidden;
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.Calculator-pad {
+  background: #f2f2f2;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Calculator-pad.Calculator-numbers {
+  width: 75%;
+}
+
+.Calculator-pad.Calculator-actions {
+  width: 25%;
+}
+
+.Calculator-pad > button {
+  font-family: inherit;
+  font-size: inherit;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  transition: background-color 0.15s ease-in-out, opacity 0.15s ease-in-out;
+  background-color: #2e2e2e;
+  color: #fff;
+  width: calc(100% / 3);
+}
+
+.Calculator-pad button:hover {
+  background-color: #212121;
+  cursor: pointer;
+}
+
+.Calculator button:focus {
+  outline: 0;
+}
+
+.Calculator-pad.Calculator-numbers > button {
+  width: calc(100% / 3);
+}
+
+.Calculator-pad.Calculator-actions > button {
+  width: 100%;
 }
