@@ -1,4 +1,5 @@
 .Calculator {
+  position: relative;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol";
@@ -9,16 +10,31 @@
   flex-wrap: wrap;
 }
 
-.Calculator-display {
+.Calculator-calculation {
+  position: absolute;
+  top: 0;
+  right: 0;
   background-color: #393939;
-  color: #fff;
+  color: #999;
+  padding: 0.5rem 2rem;
+  font-size: 1rem;
+  text-align: right;
+  overflow: hidden;
+  border: 0;
+  outline: 0;
+}
+
+.Calculator-display {
+  width: 100%;
   padding: 2rem;
   font-size: 3rem;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
+  text-align: right;
+  color: #fff;
+  background-color: #393939;
+  border: 0;
+  outline: 0;
   overflow: hidden;
-  width: 100%;
+  text-overflow: ellipsis;
 }
 
 .Calculator-pad {
@@ -27,11 +43,11 @@
   flex-wrap: wrap;
 }
 
-.Calculator-pad.Calculator-numbers {
+.Calculator-pad.Calculator-digits {
   width: 75%;
 }
 
-.Calculator-pad.Calculator-actions {
+.Calculator-pad.Calculator-operators {
   width: 25%;
 }
 
@@ -57,10 +73,10 @@
   outline: 0;
 }
 
-.Calculator-pad.Calculator-numbers > button {
+.Calculator-pad.Calculator-digits > button {
   width: calc(100% / 3);
 }
 
-.Calculator-pad.Calculator-actions > button {
+.Calculator-pad.Calculator-operators > button {
   width: 100%;
 }
