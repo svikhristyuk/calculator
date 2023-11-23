@@ -2,6 +2,7 @@
   "name": "test-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://svikhristyuk.github.io/calculator",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -21,7 +22,9 @@
     "start": "react-scripts start",
     "start-db": "json-server db.json --port 3001 --id date",
     "build": "react-scripts build",
-    "test": "react-scripts test"
+    "test": "react-scripts test",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
